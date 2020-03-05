@@ -13,6 +13,12 @@ var gunSize2=100
 var army=[enemy, enemy2, enemy3, enemy4, enemy5];
 var guns=[1700,1700,1700,1700,1700];
 
+ 
+
+function clickSpace(){
+    gunSize2+=2;
+    gun.style.left=gunSize2+'px';
+}
 
 document.addEventListener('keydown', function(e){
     const keyCode = e.keyCode;
@@ -65,11 +71,9 @@ document.addEventListener('keydown', function(e){
         image.style.top=imgSize1+'px';
     } 
     if(keyCode==32){
-        setInterval(function(){
-            gunSize2+=2;
-            gun.style.opacity="100%"
-            gun.style.left=gunSize2+'px';
-        },1);
+        gun.style.opacity="100%"
+        var space=setInterval(clickSpace,1);
+        
     }   
 })
 
@@ -129,13 +133,18 @@ setInterval(function(){
 //총 맞았을 때
 setInterval(function(){
     for(var j=0; j<army.length; j++){
-        if(gun.style.left>=army[j].style.left&&gun.style.top>=army[j].style.top-65&&gun.style.top<=army[j].style.top+65){
-            army[j].style.opacity='0%'
-            console.log(dskjf)
-            gun.style.opacity='0%'
+        if(parseFloat(gun.style.left)>=parseFloat(army[j].style.left)&&parseFloat(gun.style.top)>=parseFloat(army[j].style.top)-65&&parseFloat(gun.style.top)<=parseFloat(army[j].style.top)+65){
+            army[j].style.left='2200px'
+            var newArmy=Math.random()*700-20
+            army[j].top=newArmy
+            army[j].style.top=newArmy+'px'
+            clearInterval(space);
+            var newGun=imgSize2+100
+            gun.left=newGun
+            gun.style.left=newGun+'px'
         }
     }
-}, 1);   
+}, 1);  
 
 
 
