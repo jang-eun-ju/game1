@@ -1,0 +1,55 @@
+.relative{
+    position: absolute;
+    left: 0px;
+    top: 300px;
+    width:150px;
+    height:200px;
+}
+.enemy{
+    position: absolute;
+    left: 1700px;
+    top: 1000px;
+    width:100px;
+    height:140px;
+    opacity:0%
+}
+.enemy2{
+    position: absolute;
+    left: 1700px;
+    top: 1000px;
+    width:100px;
+    height:140px;
+    opacity:0%
+}
+.enemy3{
+    position: absolute;
+    left: 1700px;
+    top: 1000px;
+    width:100px;
+    height:140px;
+    opacity:0%
+}
+.enemy4{
+    position: absolute;
+    left: 1700px;
+    top: 1000px;
+    width:100px;
+    height:140px;
+    opacity:0%
+}
+.enemy5{
+    position: absolute;
+    left: 1700px;
+    top: 1000px;
+    width:100px;
+    height:140px;
+    opacity:0%
+}
+.gun{
+    position: absolute;
+    left: 100px;
+    top: 350px;
+    width:30px;
+    height:30px;
+    opacity:0%;
+}
