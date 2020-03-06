@@ -8,7 +8,7 @@
 .enemy{
     position: absolute;
     left: 1700px;
-    top: 1000px;
+    top: 0px;
     width:100px;
     height:140px;
     opacity:0%
@@ -16,7 +16,7 @@
 .enemy2{
     position: absolute;
     left: 1700px;
-    top: 1000px;
+    top: 0px;
     width:100px;
     height:140px;
     opacity:0%
@@ -24,7 +24,7 @@
 .enemy3{
     position: absolute;
     left: 1700px;
-    top: 1000px;
+    top: 0px;
     width:100px;
     height:140px;
     opacity:0%
@@ -32,7 +32,7 @@
 .enemy4{
     position: absolute;
     left: 1700px;
-    top: 1000px;
+    top: 0px;
     width:100px;
     height:140px;
     opacity:0%
@@ -40,7 +40,7 @@
 .enemy5{
     position: absolute;
     left: 1700px;
-    top: 1000px;
+    top: 0px;
     width:100px;
     height:140px;
     opacity:0%
