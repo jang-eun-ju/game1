@@ -13,7 +13,8 @@ var gunSize2=100
 var army=[enemy, enemy2, enemy3, enemy4, enemy5];
 var guns=[1700,1700,1700,1700,1700];
 var gunIsDead=0;
-
+var space = setInterval(function(){},100)
+var armyFunction=new Array;
  
 
 
@@ -72,12 +73,12 @@ document.addEventListener('keydown', function(e){
         
         gunIsDead=0
         gun.style.opacity="100%"
-        var space=setInterval(function(){
-                    if(gunIsDead==0){
-                        gunSize2+=2;
-                        gun.style.left=gunSize2+'px'
-                    }
-                },1)
+        space=setInterval(function(){
+            if(gunIsDead==0){
+                gunSize2+=2;
+                gun.style.left=gunSize2+'px'
+            }
+        },1)
     }   
 })
 
@@ -94,55 +95,57 @@ setInterval(function(){
 }, 3000);
 
 
-setInterval(function(){
+armyFunction[0]=setInterval(function(){
     if(army[0].top!=null){
         guns[0]-=100;
         army[0].left=guns[0];
         army[0].style.left=guns[0]+'px';
     }
-},550)
+},1600)
 
-setInterval(function(){
+armyFunction[1]=setInterval(function(){
     if(army[1].top!=null){
         guns[1]-=100;
         army[1].left=guns[1];
         army[1].style.left=guns[1]+'px';
     }
-},500)
+},1700)
 
-setInterval(function(){
+armyFunction[2]=setInterval(function(){
     if(army[2].top!=null){
         guns[2]-=100;
         army[2].left=guns[2];
         army[2].style.left=guns[2]+'px';
     }
-},450)
+},1800)
 
-setInterval(function(){
+armyFunction[3]=setInterval(function(){
     if(army[3].top!=null){
         guns[3]-=100;
         army[3].left=guns[3];
         army[3].style.left=guns[3]+'px';
     }
-},400)
+},1900)
 
-setInterval(function(){
+armyFunction[4]=setInterval(function(){
     if(army[4].top!=null){
         guns[4]-=100;
         army[4].left=guns[4];
         army[4].style.left=guns[4]+'px';
     }
-},350)
+},2000)
 
 //총 맞았을 때
 setInterval(function(){
     for(var j=0; j<army.length; j++){
         if(parseFloat(gun.style.left)>=parseFloat(army[j].style.left)&&parseFloat(gun.style.top)>=parseFloat(army[j].style.top)-65&&parseFloat(gun.style.top)<=parseFloat(army[j].style.top)+65){
+            if()
             army[j].style.left='2200px'
             guns[j]=2200
             var newArmy=Math.random()*700-20
             army[j].top=newArmy
             army[j].style.top=newArmy+'px'
+            
             gunIsDead=1
             gun.style.opacity='0%'
             gunSize2=imgSize2+100
