@@ -73,6 +73,11 @@ document.addEventListener('keydown', function(e){
         
         gunIsDead=0
         gun.style.opacity="100%"
+        
+        gunSize2=imgSize2+100
+        gun.left=gunSize2
+        gun.style.left=gunSize2+'px'
+        clearInterval(space)
         space=setInterval(function(){
             if(gunIsDead==0){
                 gunSize2+=2;
@@ -139,7 +144,6 @@ armyFunction[4]=setInterval(function(){
 setInterval(function(){
     for(var j=0; j<army.length; j++){
         if(parseFloat(gun.style.left)>=parseFloat(army[j].style.left)&&parseFloat(gun.style.top)>=parseFloat(army[j].style.top)-65&&parseFloat(gun.style.top)<=parseFloat(army[j].style.top)+65){
-            if()
             army[j].style.left='2200px'
             guns[j]=2200
             var newArmy=Math.random()*700-20
